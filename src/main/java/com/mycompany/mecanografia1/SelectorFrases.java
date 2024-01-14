@@ -13,8 +13,8 @@ public class SelectorFrases {
 
     private void cargarFrases() {
         frases = new String[]{
-            "Frase 1",
-            "Frase 2",
+            "Frase 1:",
+            "Frase 2:",
             // ... Agrega más frases aquí ...
         };
     }

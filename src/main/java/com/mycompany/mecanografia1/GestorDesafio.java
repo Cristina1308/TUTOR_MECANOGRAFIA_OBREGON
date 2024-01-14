@@ -44,7 +44,7 @@ public class GestorDesafio {
     }
 
     public void mostrarInforme() {
-        System.out.println("Informe de Errores y Pulsaciones:");
+        System.out.println("Informe de errores y pulsaciones:");
         erroresPorLetra.forEach((letra, errores) -> System.out.println("Letra '" + letra + "': " + errores + " errores"));
         System.out.println("Total de pulsaciones: " + totalPulsaciones);
     }

@@ -26,7 +26,7 @@ public class InterfazDesafio extends JFrame {
         campoEntrada = new JTextField(20);
         botonIniciar = new JButton("Iniciar Desafío");
         botonVerificar = new JButton("Verificar");
-        etiquetaFrase = new JLabel("Presiona 'Iniciar Desafío' para comenzar");
+        etiquetaFrase = new JLabel("Presiona 'Iniciar Desafío' para empezar:");
         etiquetaEstado = new JLabel("");
 
         botonIniciar.addActionListener(new ActionListener() {
@@ -43,7 +43,7 @@ public class InterfazDesafio extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String intento = campoEntrada.getText();
                 boolean correcto = gestor.verificarFrase(intento);
-                etiquetaEstado.setText(correcto ? "¡Correcto!" : "Incorrecto. Intenta de nuevo.");
+                etiquetaEstado.setText(correcto ? "¡Correcto!" : "¡Incorrecto!. Intenta nuevamente.");
             }
         });
 

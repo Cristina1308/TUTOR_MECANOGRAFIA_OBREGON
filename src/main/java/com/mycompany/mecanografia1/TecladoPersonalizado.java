@@ -22,7 +22,7 @@ public class TecladoPersonalizado extends JPanel {
         String[] letras = {"Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
                            "A", "S", "D", "F", "G", "H", "J", "K", "L", ";",
                            "Z", "X", "C", "V", "B", "N", "M", "Ñ", ",", ".", "/",
-                           "Caps", "Space", "Enter", "Borrar"};
+                           "Mayus", "Espacio", "Enter", "Borrar"};
 
         botonesTeclado = new JButton[letras.length];
 
@@ -42,11 +42,11 @@ public class TecladoPersonalizado extends JPanel {
 
     private void procesarTecla(String tecla) {
         switch (tecla) {
-            case "Caps":
+            case "Mayus":
                 mayusculasActivadas = !mayusculasActivadas;
                 actualizarEstadoTeclado();
                 break;
-            case "Space":
+            case "Espacio":
                 interfaz.procesarCaracter(" ");
                 break;
             case "Enter":
@@ -64,7 +64,7 @@ public class TecladoPersonalizado extends JPanel {
     private void actualizarEstadoTeclado() {
         for (JButton boton : botonesTeclado) {
             String texto = boton.getText();
-            if (!texto.equals("Caps") && !texto.equals("Space") && !texto.equals("Enter") && !texto.equals("Borrar")) {
+            if (!texto.equals("Mayus") && !texto.equals("Espacio") && !texto.equals("Enter") && !texto.equals("Borrar")) {
                 boton.setText(mayusculasActivadas ? texto.toUpperCase() : texto.toLowerCase());
             }
         }
